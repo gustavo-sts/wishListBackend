@@ -1,0 +1,7 @@
+POST http://localhost:3000/wishes
+Content-Type: application/json
+
+{
+  "nome": "carro",
+  "previsao": "outubro"
+}
