@@ -12,8 +12,10 @@ router.get("/wishes", async (req, res) => {
     res.status(200).json(wishes);
   } catch (error) {
     res.status(500).json({ message: "Erro ao buscar desejos", error });
+  } finally {
+    res.end();
   }
-  res.end()
+  
 });
 
 // Rota para criar um novo desejo
@@ -33,8 +35,10 @@ router.post("/wishes", async (req, res) => {
     res.status(201).json(newWish);
   } catch (error) {
     res.status(500).json({ message: "Erro ao criar o desejo", error });
+  } finally {
+    res.end();
   }
-  res.end()
+  
 });
 
 // Rota para atualizar um desejo por ID
@@ -56,8 +60,10 @@ router.put("/wishes:id", async (req, res) => {
     res.status(200).json(updatedWish);
   } catch (error) {
     res.status(500).json({ message: "Erro ao atualizar o desejo", error });
+  } finally {
+    res.end();
   }
-  res.end()
+  
 });
 
 // Rota para deletar um desejo por ID
@@ -74,8 +80,10 @@ router.delete("/wishes:id", async (req, res) => {
     res.status(200).json({ message: "Desejo deletado com sucesso" });
   } catch (error) {
     res.status(500).json({ message: "Erro ao deletar o desejo", error });
+  } finally {
+    res.end();
   }
-  res.end()
+  
 });
 
 module.exports = router;

@@ -11,6 +11,6 @@ app.use(express.json())
 app.use(cors());
 app.use('/', wishesRoute)
 
-const PORT = process.argv.PORT || 3000
+const PORT = process.env.PORT || 3000
 
-app.listen(PORT, ()=> console.log(`Servidor iniciado na porta ${PORT}`))
+app.listen(PORT, () => console.log(`Servidor iniciado na porta ${PORT}`))
